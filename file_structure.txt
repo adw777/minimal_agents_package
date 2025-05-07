@@ -1,0 +1,46 @@
+minimal_agents/
+├── __init__.py                   # Package exports and version info
+├── agent.py                      # Core agent implementation
+
+├── llm/
+│   ├── __init__.py               # LLM provider exports
+│   ├── base.py                   # Abstract LLM provider interface
+│   ├── openai.py                 # OpenAI implementation
+│   ├── gemini.py                 # Google Gemini implementation
+│   └── ollama.py                 # Ollama implementation
+
+├── tools/
+│   ├── __init__.py               # Tool exports
+│   ├── base.py                   # Base tool interface
+
+│   ├── code/
+│   │   ├── __init__.py
+│   │   └── python_repl.py        # Python REPL tool
+
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── file_reader.py        # General file reading
+│   │   └── pdf_extraction.py     # PDF content extraction
+
+│   ├── web/
+│   │   ├── __init__.py
+│   │   ├── search.py             # Web search tools
+│   │   └── scraper.py            # Web scraping tools (if any)
+
+│   ├── utilities/
+│   │   ├── __init__.py
+│   │   ├── calculator.py         # General-purpose math tools
+│   │   ├── translation.py        # Language translation
+│   │   ├── wolfram.py            # Wolfram Alpha integration
+│   │   ├── email_tool.py         # Email handling tool
+│   │   └── image_gen.py          # Image generation tool
+
+├── utils/
+│   ├── __init__.py
+│   ├── parsing.py                # Response/data parsing
+│   └── prompts.py                # Prompt templates (like your SYSTEM + TEMPLATE)
+
+└── examples/
+    ├── simple_agent.py           # Minimal agent use
+    ├── tool_composition.py       # Using multiple tools together
+    └── custom_tools.py           # How to create/register custom tools
